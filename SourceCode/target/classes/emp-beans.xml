@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class = "com.ragu.learn.spring.core.EmployeeCRUD">
+    	<constructor-arg name = "service" ref = "standard">
+    	</constructor-arg>
+    </bean>
+    
+    <bean name = "special" class = "com.ragu.learn.spring.core.SpecialEmployeeService"></bean>
+    <bean name = "standard" class = "com.ragu.learn.spring.core.StandardEmployeeService"></bean>
+
+</beans>
